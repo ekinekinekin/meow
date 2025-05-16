@@ -1,0 +1,42 @@
+
+/**
+ * Write a description of class gradeScale here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class GradeScale
+{
+    public static String letterGrade;
+    
+    /**
+     * An example of a method - replace this comment with your own
+     *
+     * @param  y  a sample parameter for a method
+     * @return    the sum of x and y
+     */
+    public static String gradeScale(int grade)
+    {
+        if (grade >= 86) {
+            letterGrade = "A";
+        }
+        else if ((grade <= 86) && (grade <= 73 )) {
+            letterGrade = "B";
+        }
+        else if ((grade <= 72) && (grade <= 67 )) {
+            letterGrade = "C+";
+        }
+        else if ((grade <= 66) && (grade <= 60 )) {
+             letterGrade = "C";
+        }
+        else if ((grade <= 59) && (grade <= 50 )) {
+            letterGrade = "C-";
+        }
+        else if (grade < 50) {
+            letterGrade = "F";
+        }
+        
+        return (letterGrade);
+    }
+}
+
