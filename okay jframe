@@ -1,0 +1,57 @@
+// Java Swing Program to Add 
+// JMenuBar and JButton inside the JFrame 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+/**
+ * Write a description of class jFrame here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class JFrameExample {
+      // Main function
+    public static void main(String[] args) {
+        // Create the main frame
+        JFrame frame = new JFrame("JFrame Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(800, 600);
+
+        // Create a menu bar
+        JMenuBar menuBar = new JMenuBar();
+        JMenu fileMenu = new JMenu("File");
+        JMenuItem openItem = new JMenuItem("Open");
+        JMenuItem exitItem = new JMenuItem("Exit");
+        fileMenu.add(openItem);
+        fileMenu.addSeparator();
+        fileMenu.add(exitItem);
+        menuBar.add(fileMenu);
+
+        // Create a panel with a button
+        JPanel panel = new JPanel();
+        JButton button = new JButton("Click Me");
+        panel.add(button);
+
+        // Add action to the button
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(frame, "Button Clicked!");
+            }
+        });
+
+        // Create another panel with text
+        JPanel textPanel = new JPanel();
+        JLabel label = new JLabel("My Education - British Columbia");
+        textPanel.add(label);
+
+        // Set layout for the main frame
+        frame.setLayout(new BorderLayout());
+        frame.setJMenuBar(menuBar);
+        frame.add(panel, BorderLayout.CENTER);
+        frame.add(textPanel, BorderLayout.SOUTH);
+
+        frame.setVisible(true);
+    }
+}
