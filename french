@@ -1,0 +1,43 @@
+public class French extends Language {
+    private String direction;// direction of langauge
+    private String numSpeakers;
+    private String name;
+    private String regionsSpoken;
+    private String wordOrder;
+
+
+
+    // Constructor
+    public French() {
+        // super(name, numSpeakers, regionsSpoken, wordOrder);
+        // initialize super class variables
+        super("French", 130000000, "France, Canada, Belgium", "Subject-Object-Verb");
+
+        // set this class's instance variables
+        direction = "Right-To-Left";
+        numSpeakers = "";
+        
+    } // end of constructor
+
+
+
+    // override the getInfo() method
+    @Override
+    public void getInfo() {
+        System.out.println(name + " is spoken by " + numSpeakers + " around the world. It is written from " + direction + " and the most of the speakers are from " + regionsSpoken + ". Also, the word order is " + wordOrder);
+    } // end of getInfo
+
+
+
+    @Override
+    public void printFunFact() {
+        System.out.println("""
+        Frenc or langue française is a Romance language of the Indo-European family. Like all other Romance languages, it descended from the Vulgar Latin of the Roman Empire. French evolved from Northern Old Gallo-Romance, a descendant of the Latin spoken in Northern Gaul. Its closest relatives are the other langues d'oïl—languages historically spoken in northern France and in southern Belgium, which French (Francien) largely supplanted. It was also influenced by native Celtic languages of Northern Roman Gaul and by the Germanic Frankish language of the post-Roman Frankish invaders.
+            
+        """);
+        // NONE
+    } // end of printFunFact
+
+
+
+} // end of Persian
